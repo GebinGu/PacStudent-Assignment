@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PacStuMovement : MonoBehaviour
+public class PacStudentController : MonoBehaviour
 {
-    public Animator animatorController;
+    private Vector2 lastinput;
+    private Vector2 currentinput;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,24 +17,24 @@ public class PacStuMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            animatorController.SetTrigger("Up");
-        }
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            animatorController.SetTrigger("Right");
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            animatorController.SetTrigger("Left");
+
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            animatorController.SetTrigger("Down");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+
         }
     }
 }
